@@ -10,6 +10,7 @@
 - Anti Kicks, Prevents Local Script From Kicking You
 - Harded Coded against Legion Anti cheat, Popular client side anti cheat.
 - Btools Detection Bypass
+- gcinfo bypass
 
 **Script** : loadstring(game:HttpGet("WaitForTheBypassToBeDone"))()
 Created By: WhoIsE.#9106
