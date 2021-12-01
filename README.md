@@ -11,5 +11,5 @@
 - Harded Coded against Legion Anti cheat, Popular client side anti cheat.
 - Btools Detection Bypass
 
-**Script** : loadstring(game:HttpGet([Redacted]))()
+**Script** : loadstring(game:HttpGet("WaitForTheBypassToBeDone"))()
 Created By: WhoIsE.#9106
