@@ -3,13 +3,13 @@
 local BlockRemotes = false -- only use if your exploit uses newcclousure or how ever the fuck you spell it
 local clientWalkSpeedBypass = true
 local GuiDetectionBypass = true
-local InstaFlyBypass = true
+local InstaFlyBypass = true -- non retarded devs can fix patch this easily but i'll work on a new one
 local MemCheckBypas = true
 local gcInfoBypass = true
 local AntiKick = true
 local bypassLegion = true -- A popular open sourced anti cheat
 local bypassBtools = true
-local humanoidChecksBypass = true
+local humanoidChecksBypass = false -- Still working on this
 -- ============ DESCRIPTIONS (DON'T CHANGE)============
 if game:IsLoaded() then
 local LocalPlayer = game.Players.LocalPlayer
@@ -55,12 +55,6 @@ local function guiBypass()
   for i, v in pairs(getconnections(game.LocalPlayer.PlayerGui.ChildAdded)) do
 			v:Disable()
 		end 
-    local Detections = {
-        "FindFirstChild",
-        "FindFirstChildWhichIsA",
-        "FindFirstChildOfClass",
-        "IsA"
-    }
   end
 local function btoolsBypass()
   for i, v in pairs(getconnections(game.LocalPlayer.Backpack.ChildAdded)) do
@@ -85,10 +79,49 @@ gamemt.__namecall = newcclosure(function(...)
   return nc(...)
  end)
  end
-  local function humBypass()
-     for i, v in pairs(getconnections()) do
-		v:Disable()
+local function antiKick()
+		local Players = game:GetService("Players")
+	local OldNameCall;
+	OldNameCall = hookmetamethod(game, "__namecall", function(Self, ...)
+		local NameCallMethod = getnamecallmethod()
+		if tostring(string.lower(NameCallMethod)) == "kick" or tostring(string.lower(NameCallMethod)) == "Kick" then
+			return print("kick")
+		end
+	end)   
+   end
+	local function antiLegion()
+		for i, v in pairs(game:GetDescendants()) do
+		if v:IsA("LocalScript") and v.Name == "Anti" or v.Name "Main" then
+			v.Disabled = true
+		end
 	end
- end
+end
+	if BlockRemotes == true then
+		return BlockRemots()
+	end
+	if clientWalkSpeedBypass == true then
+		return clientWSP()
+   end
+	if GuiDetectionBypass == true then
+		return guiBypass()
+	end
+	if gcInfoBypass == true then
+		return hookGC()
+	end
+	if bypassLegion == true then 
+		return antiLegion()
+	end
+	if AntiKick == true then
+		return antiKick()
+	end
+	if InstaFlyBypass == true then
+		return InstantFlyBP()
+	end
+	if bypassBtools == true then
+		return btoolsBypass()
+	end
+	if MemCheckBypas == true then
+		return bypassMemCheck()
+	end
 end -- last
 
