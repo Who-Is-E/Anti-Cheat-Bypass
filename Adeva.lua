@@ -12,6 +12,7 @@ local bypassBtools = true
 local humanoidChecksBypass = false -- Still working on this
 -- ============ DESCRIPTIONS (DON'T CHANGE)============
 if game:IsLoaded() then
+	if not game.PlaceId == 7790565860 then
 local LocalPlayer = game.Players.LocalPlayer
   local hum =
 local function BlockRemots()
@@ -123,5 +124,6 @@ end
 	if MemCheckBypas == true then
 		return bypassMemCheck()
 	end
+    end
 end -- last
 
