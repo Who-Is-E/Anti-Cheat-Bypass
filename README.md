@@ -11,8 +11,9 @@
 - Harded Coded against Legion Anti cheat, Popular client side anti cheat.
 - Btools Detection Bypass
 - gcinfo bypass
+- Humanoid Detection Bypass (Coming Soon)
+- FindInstance, InstanceIsA Bypass (Coming Soon)
 
-**Script** : loadstring(game:HttpGet("WaitForTheBypassToBeDone"))()
+**Script**: loadstring(game:HttpGet("https://github.com/Who-Is-E/Adeva-Global-AcBypass/blob/main/Adeva.lua"))()
 Created By: WhoIsE.#9106
 
-**THIS IS LIKE 80% DONE WAIT FOR ME TO RELASE!**
