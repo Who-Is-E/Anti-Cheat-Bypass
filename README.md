@@ -14,3 +14,5 @@
 
 **Script** : loadstring(game:HttpGet("WaitForTheBypassToBeDone"))()
 Created By: WhoIsE.#9106
+
+**THIS IS LIKE 80% DONE WAIT FOR ME TO RELASE!**
