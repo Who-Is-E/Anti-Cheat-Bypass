@@ -14,7 +14,6 @@ local humanoidChecksBypass = false -- Still working on this
 if game:IsLoaded() then
 	if not game.PlaceId == 7790565860 then
 local LocalPlayer = game.Players.LocalPlayer
-  local hum =
 local function BlockRemots()
   local mt = getrawmetatable(game)
 		local old = mt.__namecall
