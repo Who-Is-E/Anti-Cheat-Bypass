@@ -1,4 +1,4 @@
--- Please remember this won't bypas insane anti cheats like HID or simple ac don't come crying to me later on.
+-- Please remember this won't bypas insane anti cheats 
 -- ============ SETTINGS ============
 local BlockRemotes = false -- only use if your exploit uses newcclousure or how ever the fuck you spell it
 local clientWalkSpeedBypass = true
