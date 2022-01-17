@@ -1,4 +1,9 @@
--- Please remember this won't bypas insane anti cheats 
+--[[
+MADE BY: WhoIsE.#9106
+THIS WONT BYPASS ANY INSANE ANTI CHEAT JUST DOGSHIT ONES DONT DM ME SAYING "YOUR BYPASS IS ASS".
+Edit the settings accordingly; if it throws any error's or doesn't work then DM me on discord Servers you can reach me in:
+script ware, krnl, HID systems
+]]
 -- ============ SETTINGS ============
 local BlockRemotes = false -- only use if your exploit uses newcclousure or how ever the fuck you spell it
 local clientWalkSpeedBypass = true
@@ -6,12 +11,13 @@ local GuiDetectionBypass = true
 local InstaFlyBypass = true -- non retarded devs can fix patch this easily but i'll work on a new one
 local MemCheckBypas = true
 local gcInfoBypass = true
-local AntiKick = true
+local AntiKick = true -- bypasses local script :kick() function
 local bypassLegion = true -- A popular open sourced anti cheat
 local bypassBtools = true
 local humanoidChecksBypass = false -- Still working on this
 -- ============ DESCRIPTIONS (DON'T CHANGE)============
 if game:IsLoaded() then
+	pcall(function()
 local LocalPlayer = game.Players.LocalPlayer
 local function BlockRemots()
   local mt = getrawmetatable(game)
@@ -73,7 +79,7 @@ local nc = gamemt.__namecall
 
 gamemt.__namecall = newcclosure(function(...)
   if (getnamecallmethod() == 'GetTotalMemoryUsageMb') or (getnamecallmethod() == 'GetTotalMemoryUsageMbForTag("LuaHeap")') then
-    return math.random(200, 205)
+    return math.random(10, 15) -- if this is detected lower the threash hold
   end
   return nc(...)
  end)
@@ -122,5 +128,6 @@ end
 	if MemCheckBypas == true then
 		return bypassMemCheck()
 	end
+     end)
 end -- last
 
