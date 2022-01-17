@@ -12,7 +12,6 @@ local bypassBtools = true
 local humanoidChecksBypass = false -- Still working on this
 -- ============ DESCRIPTIONS (DON'T CHANGE)============
 if game:IsLoaded() then
-	if not game.PlaceId == 7790565860 then
 local LocalPlayer = game.Players.LocalPlayer
 local function BlockRemots()
   local mt = getrawmetatable(game)
@@ -62,7 +61,7 @@ local function btoolsBypass()
 		end 
  end
 local function InstantFlyBP()
- for i, v in pairs(getconnections(LocalPlayer.ChildAdded)) do
+ for i, v in pairs(getconnections(LocalPlayer.Charachter.ChildAdded)) do
 		v:Disable()
 	end
 end
@@ -123,6 +122,5 @@ end
 	if MemCheckBypas == true then
 		return bypassMemCheck()
 	end
-    end
 end -- last
 
