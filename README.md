@@ -15,6 +15,6 @@
 - Humanoid Detection Bypass (Coming Soon)
 - FindInstance, InstanceIsA Bypass (Coming Soon)
 
-**Script**: ```loadstring(game:HttpGet(https://raw.githubusercontent.com/Who-Is-E/Adeva-Global-AcBypass/main/Adeva.lua"))()```
+**Script**: ```loadstring(game:HttpGet("https://raw.githubusercontent.com/Who-Is-E/Adeva-Global-AcBypass/main/Adeva.lua"))()```
 Created By: WhoIsE.#9106
 
