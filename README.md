@@ -11,6 +11,7 @@
 - Harded Coded against Legion Anti cheat, Popular client side anti cheat.
 - Btools Detection Bypass
 - gcinfo bypass
+- LogService / Error / Warn / Print / ScriptContext error bypass
 - Humanoid Detection Bypass (Coming Soon)
 - FindInstance, InstanceIsA Bypass (Coming Soon)
 
