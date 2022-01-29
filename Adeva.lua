@@ -15,9 +15,11 @@ local AntiKick = true -- bypasses local script :kick() function
 local bypassLegion = true -- A popular open sourced anti cheat
 local bypassBtools = true
 local humanoidChecksBypass = false -- Still working on this
+local BypassErrorChecking = true
 -- ============ DESCRIPTIONS (DON'T CHANGE)============
 if game:IsLoaded() then
 	pcall(function()
+local LgService = game:GetService("LogService")
 local LocalPlayer = game.Players.LocalPlayer
 local function BlockRemots()
   local mt = getrawmetatable(game)
@@ -52,7 +54,14 @@ local function hookGC()
       return math.random(30, 35)
        end)
   end
-
+local function bpError()
+for i,v in next, getconnections(LgService.MessageOut) do
+    v:Disable()
+end
+for i,v in next, getconnections(game:GetService("ScriptContext").Error) do
+    v:Disable()
+end			
+end
 local function guiBypass()
   for i, v in pairs(getconnections(game.DescendantAdded)) do
 			v:Disable()
@@ -101,6 +110,9 @@ local function antiKick()
 		end
 	end
 end
+	if BypassErrorChecking == true then
+	  return bpError()
+	end
 	if BlockRemotes == true then
 		return BlockRemots()
 	end
