@@ -51,7 +51,7 @@ local function clientWSP()
 
 local function hookGC()
   hookfunction(gcinfo, function(...)
-      return math.random(30, 35)
+      return error() -- Better method because they can check GC Drops as well, so we just return some random stuff
        end)
   end
 local function bpError()
@@ -66,12 +66,12 @@ local function guiBypass()
   for i, v in pairs(getconnections(game.DescendantAdded)) do
 			v:Disable()
 		end 
-  for i, v in pairs(getconnections(game.LocalPlayer.PlayerGui.ChildAdded)) do
+  for i, v in pairs(getconnections(LocalPlayer.PlayerGui.ChildAdded)) do
 			v:Disable()
 		end 
   end
 local function btoolsBypass()
-  for i, v in pairs(getconnections(game.LocalPlayer.Backpack.ChildAdded)) do
+  for i, v in pairs(getconnections(LocalPlayer.Backpack.ChildAdded)) do
 			v:Disable()
 		end 
  end
@@ -105,7 +105,7 @@ local function antiKick()
    end
 	local function antiLegion()
 		for i, v in pairs(game:GetDescendants()) do
-		if v:IsA("LocalScript") and v.Name == "Anti" or v.Name "Main" then
+		if v:IsA("LocalScript") and v.Name == "Anti" or v.Name == "Main" then
 			v.Disabled = true
 		end
 	end
