@@ -1,4 +1,4 @@
-# Adeva | Global Anti-Cheat Bypass
+# Adeva | Global Anti-Cheat Bypass ( I put 0 effort into this)
 **Global bypass for shitty anti cheats supports: Synapse, Scripware, Krnl (I think), and other exploits that has newcclousure, hookfuc, and supports metatable hooking.**
 **THIS WONT BYPASS SERVER SIDE / REALLY GOOD ANTI CHEATS I'LL EVENTAULLY UPDATE IT TO BE A GOOD BYPASS IN THE FUTURE**
 **Feaures:**
