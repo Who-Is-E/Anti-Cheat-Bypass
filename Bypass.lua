@@ -6,31 +6,8 @@ script ware, krnl, HID systems
 ]]
 
 -- THIS SCRIPT IS UNDERGOING A RE-Write
-local function CheckForFunctions()
- local getconnections = getconnections or get_connections
- local checkCaller = checkcaller or check_caller
- local hookFunction = hookfunction or hook_function
- local getNameCall = getnamecallmethod
- local newC = newcclosure
- local hookmetamethod = hookmetamethod or hook_metamethod
-	
-	if not (getconnections) or not (checkCaller) or not (hookFunction) or not (getNameCall) or not (newC) or not (hookmetamethod) then 
-	return warn("Executor Not Supported")
-     end
-end
 
-CheckForFunctions()
-
-local LogService, ScriptContextService = game:GetService("LogService"), game:GetService("ScriptContext")
-local gc, gc2,  memory = gcinfo(), collectgarbage('count'), game["Stats"]["GetTotalMemoryUseageMb"]
-
-local Connections[] = {
-game.ChildAdded,
-game["ChildAdded"],
-game.DescendantAdded,
-game["DescendantAdded"],
-
-}
+--[[ Disconinued for now, will re-write when I have time ]]--
 
 
 
